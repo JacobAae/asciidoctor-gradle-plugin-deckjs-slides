@@ -1,0 +1,25 @@
+= Title of Presentation 
+Presenter Name
+:backend: deckjs
+:deckjs_transition: fade
+:navigation:
+
+== Title of Slide One 
+
+This is the first slide after the title slide.
+
+== Stepped paragraphs
+
+[options="step"]
+This paragraph is displayed first.
+
+[options="step"]
+Then this paragraph is displayed when the _Next_ arrow is clicked.
+
+== Stepped list items
+
+[options="step"]
+* A bullet is displayed each time the _Next_ arrow is clicked.
+* B
+* C
+

@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.0'
+    }
+}
+
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
+
+asciidoctor {
+	sourceDir = new File('src/asciidoc')
+	outputDir = new File('$buildDir/docs')
+	backend = 'deckjs'
+
+	options = [
+            	template_dirs: ["${projectDir}/asciidoctor-backends/haml".toString()],
+		template_engine: 'deckjs',
+		attributes: [
+			'source-highlighter': 'coderay',
+			'deckjs_transition': 'fade',
+			'navigation':''
+		]
+	]
+}
+
