@@ -13,7 +13,7 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 asciidoctor {
 	sourceDir = new File('src/asciidoc')
 	outputDir = new File('docs')
-	backend = 'deckjs'
+	backends = ['deckjs']
 
 	options = [
             	template_dirs: ["${projectDir}/asciidoctor-backends/haml".toString()],
