@@ -1,0 +1,3 @@
+= asciidoctor-gradle-plugin-deckjs-slides
+
+Slides using the asciidoctor gradle plugin and deckjs
