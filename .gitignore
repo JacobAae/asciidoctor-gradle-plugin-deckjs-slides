@@ -2,3 +2,6 @@
 .idea
 .jruby
 *.iml
+docs/*.html
+docs/css
+.sass-cache
