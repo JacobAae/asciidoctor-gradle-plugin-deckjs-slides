@@ -3,7 +3,19 @@
     %tr
       %td.icon
         - if @document.attr? :icons, 'font'
-          %i{:class=>"icon-#{attr :name}", :title=>@caption}
+          - case "#{attr :name}"
+          - when "note"
+            %i{:class=>"fa fa-info-circle", :title=>@caption}
+          - when "tip"
+            %i{:class=>"fa fa-lightbulb-o", :title=>@caption}
+          - when "warning"
+            %i{:class=>"fa fa-exclamation-triangle", :title=>@caption}
+          - when "caution"
+            %i{:class=>"fa fa-fire", :title=>@caption}
+          - when "important"
+            %i{:class=>"fa fa-exclamation-circle", :title=>@caption}
+          - else
+            %i{:class=>"fa icon-#{attr :name}", :title=>@caption}
         - elsif @document.attr? :icons
           %img{:src=>icon_uri(attr :name), :alt=>@caption}
         - else
