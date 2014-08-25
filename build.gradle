@@ -24,11 +24,12 @@ asciidoctor.dependsOn compileSass
 asciidoctor {
 	sourceDir = new File('src/asciidoc')
 	outputDir = new File('docs')
-	backends = ['deckjs']       // 'deckjs', 'html5'
+	backends = ['html5']       // 'deckjs', 'html5'
 
 	options = [
 			template_dirs: ["${projectDir}/asciidoctor-backends/haml".toString()],
 			attributes: [
+					'imagesdir': 'images',
 					'source-highlighter': 'coderay',
 					'deckjs_theme': 'web-2.0', // 'web-2.0' , 'swiss', 'neon'
 					'deckjs_transition': 'horizontal-slide', // 'fade', 'horizontal-slide' , 'vertical-slide'
@@ -39,7 +40,7 @@ asciidoctor {
 					'split':'',
 					'blank':'',
 					'icons':'font',
-					'customcss': 'css/custom.css',
+			//		'customcss': 'css/custom.css',
 					'viewport': 'width=1000, user-scalable=yes',
 					'sectids!': '',
 					'showtitle':''
